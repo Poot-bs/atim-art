@@ -1,0 +1,558 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background: white;
+    background-attachment: fixed;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: rgba(34, 34, 34, 0.9); /* Semi-transparent background */
+    color: #fff;
+    padding: 10px 20px; /* Reduced padding to make it smaller */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 60px; /* Fixed height for the nav bar */
+}
+
+.logo-image {
+    max-height: 50px; /* Adjusted size for smaller nav bar */
+    width: auto;
+    border-radius: 50%; /* Makes the logo circular */
+    border: 2px solid #fce38f; /* Adds a border */
+    padding: 5px; /* Adds some spacing */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background for contrast */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.logo-image:hover {
+    transform: scale(1.1); /* Slightly enlarges on hover */
+    box-shadow: 0 4px 8px rgba(159, 255, 247, 0.5); /* Adds a glow effect */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Ensure links and button are aligned */
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff; /* White text color */
+    font-size: 16px; /* Slightly smaller font size */
+    font-weight: 500; /* Medium weight for better readability */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Adds spacing between letters */
+    position: relative; /* For underline effect */
+    transition: color 0.3s ease; /* Smooth transitions */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Position below the text */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fce38f; /* Underline color */
+    transition: width 0.3s ease; /* Smooth transition for underline */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+/* CTA Button */
+.cta-nav {
+    background-color: #fce38f;
+    color: #222;
+    padding: 8px 16px; /* Smaller padding */
+    border-radius: 5px;
+    font-size: 14px; /* Smaller font size */
+    font-weight: 500; /* Medium weight */
+    margin-left: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+.cta-nav:hover {
+    background-color: #fce38f; /* Hover color */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left; /* Align text to the left */
+    color: #000000;
+    padding: 0 20px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-text .cta {
+    margin-right: 10px;
+    background-color: #fce38f;
+    color: #222;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+.hero-text .discover {
+    background-color: #222;
+    color: #fff;
+}
+
+.hero-text .discover:hover {
+    background-color: #444; /* Darker hover color */
+}
+
+.hero-image img {
+    max-width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.hero-image img:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+}
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #000000, rgba(34, 34, 34, 0.747));
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.about .cta {
+    background-color: #fce38f;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+.about .cta:hover {
+    background-color: #fce38f; /* Hover color */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+}
+
+.about-image img:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+}
+
+/* Best Veste Section */
+.best-veste {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #000000, rgba(34, 34, 34, 0.747));
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.best-veste-image {
+    max-width: 40%; /* Smaller width for the image */
+    text-align: center; /* Center the image */
+}
+
+.best-veste-image img {
+    max-width: 80%; /* Make the image smaller */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.best-veste-image img:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+}
+
+.best-veste-content {
+    max-width: 50%;
+    padding: 20px;
+}
+
+.best-veste-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff; /* Dark text color */
+}
+
+.best-veste-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #d6d0d0; /* Slightly lighter text color */
+}
+
+.best-veste-content .cta {
+    background-color: #fce38f;
+    color: #222;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+.best-veste-content .cta:hover {
+    background-color: #fce38f; /* Hover color */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+}
+
+/* Featured Products */
+.featured {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #000000, rgba(34, 34, 34, 0.747));
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.featured-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.product {
+    background-color: #fce38f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 250px; /* Smaller width for better organization */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+    text-align: center; /* Center-align content */
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover */
+}
+
+.product img {
+    max-width: 85%; /* Smaller image size */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+    border: 2px solid #000000; /* Add a border */
+}
+
+.product img:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+}
+
+.product h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222; /* Dark text color */
+}
+
+.product p {
+    font-size: 16px;
+    color: #666; /* Slightly lighter text color */
+}
+
+/* Footer */
+footer {
+    background: white;
+    color: rgb(0, 0, 0); /* Changed to black */
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer .footer-content {
+    margin-bottom: 20px;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style for the copy message */
+.copy-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+/* Show the message */
+.copy-message.show {
+    opacity: 1;
+}
+
+/* Style for clicked elements */
+.copied {
+    color: #fce38f; /* Change to your desired color */
+    transition: color 0.3s ease;
+}
+
+/* Responsive styles for the hero section */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center align text */
+        margin-top: -10%;
+        margin-bottom: -10%;
+    }
+
+    .hero-image img {
+        margin-top: 25%; /* Space between image and buttons */
+    }
+
+    .hero-content {
+        flex-direction: column; /* Stack hero content vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .hero-text {
+        max-width: 100%; /* Allow full width */
+    }
+
+    .hero-text h1 {
+        font-size: 32px; /* Adjust font size for mobile */
+        margin-bottom: 10px; /* Adjust margin */
+    }
+
+    .hero-text p {
+        font-size: 16px; /* Adjust font size for mobile */
+        margin-bottom: 20px; /* Adjust margin */
+    }
+
+    .hero-text .cta {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 16px; /* Adjust button font size */
+        margin-right: 10px;
+    }
+}
+
+/* Responsive styles for About and Best Veste sections */
+@media (max-width: 768px) {
+    .about, .best-veste {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .about-content, .best-veste-content {
+        max-width: 100%; /* Allow full width */
+        text-align: center; /* Center align text */
+    }
+}
+
+/* Burger menu styles */
+.burger-menu {
+    display: none; /* Hide burger menu by default */
+    flex-direction: column;
+    cursor: pointer;
+    font-size: 30px; /* Size of the burger icon */
+}
+
+/* Ensure nav links are hidden by default on mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Positioning for dropdown */
+        top: 60px; /* Below the header */
+        left: 0;
+        background-color: rgba(34, 34, 34, 0.9); /* Background color */
+        width: 100%; /* Full width */
+        z-index: 999; /* Above other content */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+        margin-top: 20px; /* Space below the header */
+        gap: 10px; /* Add space between nav links */
+        padding: 10px 0; /* Add padding to the top and bottom of the nav links */
+    }
+
+    .nav-links a {
+        padding: 10px 15px; /* Add padding for better click area */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s ease; /* Smooth background transition */
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    }
+
+    .burger-menu {
+        display: block; /* Show burger menu on mobile */
+        margin-left: auto; /* Push burger menu to the right */
+    }
+
+    .cta-nav {
+        order: -1; /* Move CTA button to the left */
+        margin-left: 0; /* Remove left margin */
+        margin-right: 20px; /* Add space between CTA button and burger menu */
+    }
+}
+
+/* Hide burger menu on desktop */
+@media (min-width: 769px) {
+    .burger-menu {
+        display: none; /* Hide burger menu on desktop */
+    }
+}
+/* WhatsApp floating button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 100;
+}
+
+.whatsapp-icon {
+    font-size: 50px;
+    color: #25D366;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+    color: #128C7E;
+}

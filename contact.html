@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIM ART - Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for WhatsApp icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo" id="logo-container">
+            <a href="index.html">
+                <img src="/images/logo2.png" alt="ATIM ART Logo" class="logo-image">
+            </a>
+        </div>
+        <nav id="navbar">
+            <div class="burger-menu" id="burger-menu">
+                &#9776; <!-- Burger icon -->
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="shop.html">Boutique</a></li>
+                <li><a href="about.html">À Propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="cta-nav" id="order-button">Commander</a>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-content">
+            <h2 class="fadeInDown">Contactez-moi</h2>
+            <p class="fadeInUp">Pour toute question ou commande spéciale, n'hésitez pas à me contacter.</p>
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form fadeInUp">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                </div>
+                <button type="submit" class="cta">Envoyer</button>
+            </form>
+        </div>
+        <div class="contact-image fadeInRight">
+            <img src="/images/icon2.png" alt="Contact Image">
+        </div>
+    </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- WhatsApp button fixed in footer -->
+    <div class="whatsapp-footer">
+        <a href="https://wa.me/212637989674" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp whatsapp-icon"></i>
+        </a>
+    </div>
+    
+    <div class="footer-content">
+        <h3>Contactez-moi</h3>
+        <p>Email: <span id="email" onclick="copyToClipboard('atimadbouragba@gmail.com', this)">atimadbouragba@gmail.com</span></p>
+        <p>Téléphone: <span id="phone" onclick="copyToClipboard('+212637989674', this)">+212 637989674</span></p>
+        <p>&copy; 2025 ATIM ART. Tous droits réservés.</p>
+    </div>
+
+    <!-- Styled Message -->
+    <div id="copy-message" class="copy-message">Copié dans le presse-papiers !</div>
+</footer>
+
+    <!-- Script for Form Submission -->
+    <script src="script.js"></script>
+</body>
+</html>

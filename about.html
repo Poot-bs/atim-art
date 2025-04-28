@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIM ART - À Propos</title>
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo" id="logo-container">
+        <a href="index.html">
+            <img src="/images/logo2.png" alt="ATIM ART Logo" class="logo-image">
+        </a>
+    </div>
+    <nav id="navbar">
+        <div class="burger-menu" id="burger-menu">
+            &#9776; <!-- Burger icon -->
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="shop.html">Boutique</a></li>
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="cta-nav" id="order-button">Commander</a>
+    </nav>
+</header>
+
+    <!-- About Section -->
+    <section class="about animated">
+        <div class="about-content">
+            <h2>À Propos de Moi</h2>
+            <p>Je suis une artiste passionnée, spécialisée dans la personnalisation de vêtements et d'accessoires, que je transforme en œuvres d'art uniques. Mon objectif est de créer des pièces originales qui reflètent la créativité et l'individualité de chaque personne.</p>
+            <p>Mon objectif c'est de transmettre ma vision créative à travers des pièces uniques qui racontent une histoire. J’aspire à offrir à chacun un vêtement ou un accessoire qui lui ressemble, tout en fusionnant art et mode pour créer des objets qui suscitent l'émotion et l'admiration.
+            </p>
+            <a href="shop.html" class="cta">Voir Mes Créations</a>
+        </div>
+        <div class="about-image">
+            <img src="/images/icon2.png" alt="Artiste ATIM ART" class="fade-in">
+        </div>
+    </section>
+
+    <!-- Artistic Process Section -->
+    <section class="process">
+        <h2>Mon Processus Créatif</h2>
+        <div class="process-steps">
+            <div class="step">
+                <img src="/images/inspiration  (1).webp" alt="Étape 1" class="process-image">
+                <h3>Inspiration</h3>
+                <p>Je m'inspire des tendances artistiques et de votre vision pour créer des designs uniques.</p>
+            </div>
+            <div class="step">
+                <img src="/images/inspiration  (2).webp" alt="Étape 2" class="process-image">
+                <h3>Personnalisation</h3>
+                <p>Chaque pièce est soigneusement peinte à la main pour garantir un résultat exceptionnel.</p>
+            </div>
+            <div class="step">
+                <img src="/images/finition.webp" alt="Étape 3" class="process-image">
+                <h3>Finalisation</h3>
+                <p>Les finitions sont effectuées avec précision pour garantir la qualité et la durabilité.</p>
+            </div>
+        </div>
+    </section>
+
+ 
+<!-- Footer -->
+  <!-- Footer -->
+  <footer>
+    <!-- WhatsApp button fixed in footer -->
+    <div class="whatsapp-footer">
+        <a href="https://wa.me/212637989674" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp whatsapp-icon"></i>
+        </a>
+    </div>
+    
+    <div class="footer-content">
+        <h3>Contactez-moi</h3>
+        <p>Email: <span id="email" onclick="copyToClipboard('atimadbouragba@gmail.com', this)">atimadbouragba@gmail.com</span></p>
+        <p>Téléphone: <span id="phone" onclick="copyToClipboard('+212637989674', this)">+212 637989674</span></p>
+        <p>&copy; 2025 ATIM ART. Tous droits réservés.</p>
+    </div>
+
+    <!-- Styled Message -->
+    <div id="copy-message" class="copy-message">Copié dans le presse-papiers !</div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
